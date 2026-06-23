@@ -150,7 +150,7 @@ importance_df = importance_df.sort_values(
     ascending=False
 )
 
-fig, ax = plt.subplot(figsize=(8,5))
+fig, ax = plt.subplots(figsize=(8,5))
 
 ax.brah(
     importance_df["Features"][:10],
