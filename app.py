@@ -153,7 +153,7 @@ importance_df = importance_df.sort_values(
 fig, ax = plt.subplots(figsize=(8,5))
 
 ax.barh(
-    importance_df["Features"][:10],
+    importance_df["Feature"][:10],
     importance_df["Importance"][:10]
 )
 
