@@ -138,7 +138,7 @@ if st.button("Predict"):
 st.subheader("Feature importance")
 
 importance = model.feature_importances_
-features = sample.columns
+features = model.feature_name_in_
 
 importance_df = pd.DataFrame({
     "Feature": features,
