@@ -138,7 +138,7 @@ if st.button("Predict"):
 st.subheader("Feature importance")
 
 importance = model.feature_importances_
-features = model.feature_name_in_
+features = model.feature_names_in_
 
 importance_df = pd.DataFrame({
     "Feature": features,
@@ -158,6 +158,8 @@ ax.barh(
 )
 
 ax.invert_yaxis()
+ax.set_xlabel("Importance Score")
+ax.set_title("Top 10 Important Features")
 
 st.pyplot(fig)
 
