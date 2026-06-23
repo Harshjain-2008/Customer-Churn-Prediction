@@ -101,7 +101,7 @@ importance_df = pd.DataFrame({
 })
 
 importance_df = importance_df.sort_values(
-    by=importance_df,
+    by="Importance",
     ascending=False
 )
 
