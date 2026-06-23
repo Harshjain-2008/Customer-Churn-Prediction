@@ -7,8 +7,53 @@ model = joblib.load("models/churn_model.pkl")
 
 st.title("CUSTOMER CHURN PREDICTION")
 
-st.sidebar.title("Model Information")
-st.sidebar.metric("Accuracy", "79.3")
+
+# Sidebar 
+st.sidebar.title("📌 Model Information")
+
+st.sidebar.metric(
+    "Model Accuracy",
+    "81.5%"
+)
+
+st.sidebar.markdown("---")
+
+st.sidebar.subheader("🤖 About Model")
+
+st.sidebar.info(
+    """
+    Model Used: Random Forest Classifier
+
+    Purpose:
+    Predict whether a customer is likely to churn (leave the service) or stay.
+
+    Target Variable:
+    Churn (Yes/No)
+
+    Dataset:
+    IBM Telco Customer Churn Dataset
+
+    Algorithm Strengths:
+    - Handles categorical and numerical data well
+    - Reduces overfitting
+    - Provides feature importance scores
+    - High prediction accuracy
+    """
+)
+
+st.sidebar.markdown("---")
+
+st.sidebar.subheader("📊 Project Workflow")
+
+st.sidebar.markdown("""
+1. Data Collection
+2. Data Cleaning
+3. Exploratory Data Analysis
+4. Data Preprocessing
+5. Model Training
+6. Model Evaluation
+7. Prediction
+""")
 
 # User inputs 
 
